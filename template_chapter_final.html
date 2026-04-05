@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{META_DESC}}">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="{{OG_TITLE}}">
+  <meta property="og:description" content="{{META_DESC}}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://omnifiles.org/{{CANONICAL}}">
+  <meta property="og:site_name" content="OMNIFILES">
+  <link rel="canonical" href="https://omnifiles.org/{{CANONICAL}}">
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/style.css">
+  <title>{{PAGE_TITLE}} · OMNIFILES</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "name": "{{OG_TITLE}}",
+    "description": "{{META_DESC}}",
+    "url": "https://omnifiles.org/{{CANONICAL}}",
+    "datePublished": "{{DATE}}",
+    "publisher": { "@type": "Organization", "name": "OMNIFILES" }
+  }
+  </script>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div>
+      <a href="/" class="site-logo">OMNIFILES</a>
+      <div class="site-tagline">GLOBAL INTELLIGENCE ARCHIVE &middot; UNAUTHORIZED ACCESS PROHIBITED</div>
+    </div>
+    <div class="site-session">
+      <div>ACCESS LEVEL: PUBLIC</div>
+      <div>{{DATE}}</div>
+    </div>
+  </header>
+
+  <!-- AD: HEADER -->
+  <div id="ad-header" class="ad-slot ad-slot--header"></div>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="breadcrumb">
+    {{BREADCRUMB}}
+  </nav>
+
+  <!-- MAIN LAYOUT -->
+  <div class="page-layout">
+
+    <!-- MAIN COLUMN -->
+    <main class="page-main">
+
+      <!-- FILE METADATA -->
+      <div class="file-meta">
+        <div class="file-meta-top">
+          <div>
+            <div class="file-number-label">FILE NUMBER</div>
+            <div class="file-number">#{{FILE_NUMBER}}</div>
+          </div>
+          <div class="classification-badge">{{CLASSIFICATION}}</div>
+        </div>
+        <div class="file-grid">
+          <div>
+            <div class="file-field-label">ΧΩΡΑ / REGION</div>
+            <div class="file-field-value">{{COUNTRY}}</div>
+          </div>
+          <div>
+            <div class="file-field-label">ΑΝΤΙΚΕΙΜΕΝΟ</div>
+            <div class="file-field-value">{{SUBJECT}}</div>
+          </div>
+          <div>
+            <div class="file-field-label">ΚΑΤΗΓΟΡΙΑ</div>
+            <div class="file-field-value">{{CATEGORY}}</div>
+          </div>
+          <div>
+            <div class="file-field-label">ΗΜΕΡΟΜΗΝΙΑ</div>
+            <div class="file-field-value">{{DATE}}</div>
+          </div>
+          <div>
+            <div class="file-field-label">ΚΑΤΑΣΤΑΣΗ</div>
+            <div class="file-field-value {{STATUS_CLASS}}">{{STATUS}}</div>
+          </div>
+          <div>
+            <div class="file-field-label">ΣΕΛΙΔΑ</div>
+            <div class="file-field-value">{{PAGE_INFO}}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTENT PART 1 -->
+      <div class="chapter-content">
+        {{CONTENT_PART_1}}
+      </div>
+
+      <!-- AD: IN-CONTENT -->
+      <div id="ad-incontent" class="ad-slot ad-slot--incontent"></div>
+
+      <!-- CONTENT PART 2 -->
+      <div class="chapter-content">
+        {{CONTENT_PART_2}}
+      </div>
+
+      <!-- ANALYST NOTES -->
+      {{ANALYST_NOTES_BLOCK}}
+
+      <!-- INTEL REQUEST -->
+      {{INTEL_REQUEST_BLOCK}}
+
+      <!-- AD: FOOTER -->
+      <div id="ad-footer" class="ad-slot ad-slot--footer"></div>
+
+      <!-- NAVIGATION -->
+      <nav class="chapter-nav" aria-label="chapter navigation">
+        {{PREV_BLOCK}}
+        <a href="{{PARENT_URL}}" class="nav-return">&#x21A9; {{PARENT_LABEL}}</a>
+        {{NEXT_BLOCK}}
+      </nav>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="page-sidebar">
+
+      <!-- AD: SIDEBAR -->
+      <div id="ad-sidebar" class="ad-slot ad-slot--sidebar"></div>
+
+      <!-- RELATED FILES -->
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-label">ΣΧΕΤΙΚΟΙ ΦΑΚΕΛΟΙ</div>
+        {{RELATED_FILES}}
+      </div>
+
+      <!-- ARCHIVE STATS -->
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-label">ΑΡΧΕΙΟ</div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-num">{{TOTAL_CHAPTERS}}</span>
+          <span class="sidebar-stat-lbl">ΦΑΚΕΛΟΙ</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-num">{{TOTAL_COUNTRIES}}</span>
+          <span class="sidebar-stat-lbl">ΧΩΡΕΣ</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-num">{{TOTAL_WORDS}}</span>
+          <span class="sidebar-stat-lbl">ΛΕΞΕΙΣ</span>
+        </div>
+      </div>
+
+    </aside>
+
+  </div><!-- /page-layout -->
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      OMNIFILES &copy; {{YEAR}} &middot; FICTION ARCHIVE &middot; {{WORD_COUNT}} ΛΕΞΕΙΣ
+    </div>
+    <div class="footer-right">
+      <a href="/{{LANG_TOGGLE_URL}}">{{LANG_TOGGLE_LABEL}}</a>
+      &middot;
+      <a href="/about.html">ABOUT</a>
+    </div>
+  </footer>
+
+  <div class="credits-bar">
+    Created by <a href="https://cybernetica.gr" target="_blank" rel="noopener">Cybernetica</a>
+    &middot;
+    Powered by <a href="https://peakbots.ai" target="_blank" rel="noopener">PeakBots AI</a>
+  </div>
+
+  <div class="legal-bar">
+    OMNIFILES IS A WORK OF FICTION &middot; ALL CHARACTERS AND EVENTS ARE FICTITIOUS &middot;
+    HISTORICAL EVENTS ARE REFERENCED FOR NARRATIVE PURPOSES ONLY &middot;
+    <a href="/about.html">LEARN MORE</a>
+  </div>
+
+</div><!-- /container -->
+
+<script src="/assets/ads.js"></script>
+</body>
+</html>
