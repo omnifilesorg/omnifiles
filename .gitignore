@@ -1,0 +1,5 @@
+deploy.sh
+nohup.out
+test.txt
+output/
+*.log
