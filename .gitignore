@@ -3,3 +3,4 @@ nohup.out
 test.txt
 output/
 *.log
+deploy_chapter.sh
